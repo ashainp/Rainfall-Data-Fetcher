@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BOM IFD Fetcher</title>
+  <style>
+    /* Body and form styling */
+    body {
+      width: 300px;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f7;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 18px;
+      text-align: center;
+      margin: 15px 0;
+      color: #1f618d;
+    }
+
+    /* Image styling - Reduced size by 40% */
+    .header-image {
+      max-width: 60%; /* Set the image width to 60% of its original size */
+      height: auto;
+      display: block;
+      margin: 0 auto 15px; /* Center the image and add a bottom margin */
+      border-radius: 8px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+    }
+
+    input {
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input:focus {
+      border-color: #1f618d;
+      outline: none;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 14px;
+      background-color: #1f618d;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #145a86;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>BOM IFD Fetcher</h1>
+
+  <!-- Display the resized image -->
+  <img src="image.png" alt="Australia Map" class="header-image">
+
+  <form id="coordinate-form">
+    <label for="coordinates">Enter Coordinates (lat, lng):</label>
+    <input type="text" id="coordinates" name="coordinates" placeholder="-42.87555111366436, 147.3937423865089" required>
+    <button type="submit">Fetch Data</button>
+  </form>
+
+  <div class="footer">
+    <p>Powered by BOM</p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
