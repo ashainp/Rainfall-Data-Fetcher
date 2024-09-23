@@ -1,9 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "BOM IFD Fetcher",
-  "version": "1.0",
-  "description": "Fetches IFD data from BOM based on coordinates.",
-  "permissions": ["tabs", "activeTab"],
+  "name": "Rainfall Data Fetcher",
+  "version": "1.1",
+  "description": "Fetches IFD data from BOM and rainfall data from ARR based on coordinates.",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -16,5 +15,12 @@
     "16": "icon-16.png",
     "48": "icon-48.png",
     "128": "icon-128.png"
-  }
+  },
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.bom.gov.au/*",
+    "https://data.arr-software.org/*"
+  ]
 }
