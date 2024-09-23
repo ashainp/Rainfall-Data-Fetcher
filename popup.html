@@ -1,89 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>BOM IFD Fetcher</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rainfall Data Fetcher</title>
   <style>
-    /* Body and form styling */
     body {
-      width: 300px;
       font-family: Arial, sans-serif;
-      background-color: #f4f6f7;
-      color: #333;
-    }
-
-    h1 {
-      font-size: 18px;
       text-align: center;
-      margin: 15px 0;
-      color: #1f618d;
+      width: 400px; /* Wider layout */
     }
-
-    /* Image styling - Reduced size by 40% */
-    .header-image {
-      max-width: 60%; /* Set the image width to 60% of its original size */
-      height: auto;
-      display: block;
-      margin: 0 auto 15px; /* Center the image and add a bottom margin */
-      border-radius: 8px;
+    h1 {
+      font-size: 24px;
+      margin: 10px 0;
     }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      padding: 15px;
+    h2 {
+      font-size: 14px;
+      margin: 0 0 20px 0;
     }
-
-    input {
-      margin-bottom: 10px;
+    #label-field {
+      margin: 10px 0;
+    }
+    input[type="text"] {
       padding: 8px;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      margin: 5px 0;
+      width: 90%; /* Adjusted width */
+      font-size: 16px;
     }
-
-    input:focus {
-      border-color: #1f618d;
-      outline: none;
-    }
-
     button {
-      padding: 10px;
-      font-size: 14px;
-      background-color: #1f618d;
+      background-color: #007bff; /* Blue background */
       color: white;
       border: none;
-      border-radius: 4px;
+      padding: 10px 20px;
+      margin: 10px;
       cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+      width: 90%; /* Full width buttons */
     }
-
     button:hover {
-      background-color: #145a86;
+      background-color: #0056b3; /* Darker blue on hover */
     }
-
-    .footer {
-      text-align: center;
-      font-size: 12px;
-      color: #777;
-      margin-top: 10px;
+    #map-image {
+      width: 100%; /* Adjust width as needed */
+      max-width: 210px; /* Adjusted image size */
+      margin-top: 15px;
     }
   </style>
 </head>
 <body>
-  <h1>BOM IFD Fetcher</h1>
+  <h1>Rainfall Data Fetcher</h1>
+  <h2>(BOM/ARR)</h2>
 
-  <!-- Display the resized image -->
-  <img src="image.png" alt="Australia Map" class="header-image">
-
-  <form id="coordinate-form">
-    <label for="coordinates">Enter Coordinates (lat, lng):</label>
-    <input type="text" id="coordinates" name="coordinates" placeholder="-42.87555111366436, 147.3937423865089" required>
-    <button type="submit">Fetch Data</button>
-  </form>
-
-  <div class="footer">
-    <p>Powered by BOM</p>
+  <!-- Label input field -->
+  <div id="label-field">
+    <input type="text" id="label" placeholder="Enter label (optional)">
   </div>
 
+  <!-- Coordinates input -->
+  <input type="text" id="coordinates" placeholder="Enter coordinates (lat, lng)">
+
+  <!-- Buttons for fetching BOM and ARR data -->
+  <button id="fetch-arr-btn">Fetch ARR Data</button>
+  <button id="fetch-bom-btn">Fetch BOM Data</button>
+
+  <!-- Map image -->
+  <img id="map-image" src="image.png" alt="Map of Australia" />
+
+  <!-- JavaScript -->
   <script src="popup.js"></script>
 </body>
 </html>
